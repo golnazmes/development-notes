@@ -8,7 +8,13 @@ You can use the following command to start an interactive rebase:
 ```bash
 gitv rebase -i HEAD~8
 ```
-`gitv` is an alias for #TODO
+`gitv` is an alias for "GIT_EDITOR=\"code --wait\" git" 
+The environment variable GIT_EDITOR needs to be an executable of some text editor (default is nano for most systems, vi for some others). And vscode needs a commandline flag --wait to tell it to freeze the parent process until the file has been closed. Then otherwise, it just calls the git executable.
+With bash, you can modify environment variables on a per-command basis by prefacing the command with the env variable:
+ENV_VAR=value git commit -m "..."
+or you could set the environment variable for the lifespan of the bash session using
+export ENV_VAR=value
+I don't prefer this approach since 95% of the time, I want git to just use nano 
 These commands mean:
 - **e (edit)**: Edit the commit message or the content.
 - **fixup**: Combine the commit with the previous one and discard the commit message.
