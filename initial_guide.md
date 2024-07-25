@@ -78,3 +78,25 @@ Tests the entire application flow from start to finish. Simulates real user scen
 
 ## How to Deal with Sharding in JAX for Checkpointing Systems
 #TODO
+
+
+##some useful git commands
+```bash
+git branch branch-name --set-upstream-to origin/remote-bramch-name
+```
+to make sure whenever you push from your local branch, it goes to your desired remote branch (e.g it does not go to upstream if you don't want it to)
+```bash
+git branch 
+```
+shows the list of all branches
+
+```bash
+git branch -D branch-name
+```
+deletes the desired branch
+
+```bash
+git push to-where from-where
+```
+if you want to be specific
+
